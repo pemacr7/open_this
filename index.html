@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pema ❤️ Ta Shey Cho Den</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6a88, #ff99ac);
+      font-family: "Segoe UI", sans-serif;
+      color: #fff;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 30px 40px;
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+      text-align: center;
+      max-width: 520px;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+      font-size: 2.2rem;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    pre {
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.2;
+      margin: 25px auto;
+      text-align: center;
+      white-space: pre;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-top: 10px;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    #accept {
+      background: #00e676;
+      color: #003d1f;
+      font-weight: 600;
+    }
+
+    #accept:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00e676;
+    }
+
+    #reject {
+      background: #ff5252;
+      color: #4a0000;
+      position: relative;
+    }
+
+    #message {
+      margin-top: 25px;
+      font-size: 1.2rem;
+      min-height: 1.5em;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>Ta Shey Cho Den ❤️</h1>
+    <h2>From: Pema Drakpa</h2>
+
+    <pre>
+|￣￣￣￣￣￣￣￣￣￣￣￣|
+|        I LOVE YOU!     |
+|＿＿＿＿＿＿＿＿＿＿＿＿|
+           \ (•◡•) /
+            \     /
+              ——
+              |  |
+              |_ |_ 
+    </pre>
+
+    <p>
+      I couldn’t find the right words,<br>
+      so I wrote the right code.<br><br>
+      Will you be my forever? 💍
+    </p>
+
+    <div class="buttons">
+      <button id="accept">Accept 💖</button>
+      <button id="reject">Reject 🙈</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+
+  <script>
+    const acceptBtn = document.getElementById("accept");
+    const rejectBtn = document.getElementById("reject");
+    const message = document.getElementById("message");
+
+    acceptBtn.addEventListener("click", () => {
+      document.body.style.background =
+        "linear-gradient(135deg, #00c853, #b2ff59)";
+      message.innerHTML =
+        "💘 YES CONFIRMED 💘<br>Pema + Ta Shey = Official 🚀";
+    });
+
+    rejectBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 200 - 100;
+      const y = Math.random() * 200 - 100;
+      rejectBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    rejectBtn.addEventListener("click", () => {
+      message.innerHTML =
+        "Nice try 😏<br>That button is just decorative.";
+    });
+  </script>
+
+</body>
+</html>
